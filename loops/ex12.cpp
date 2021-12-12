@@ -1,25 +1,21 @@
 #include <iostream>
-#include <string>
-
-int main()
-{
-    int number, n;
-    std::cin >> number >> n;
-    std::string result = "";
-    std::string symbols[] = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F" };
-    int str_size = 0;
-    while (number > 0)
-    {
-        int digit = number % n;
-        result = result + symbols[digit];
-        number = number / n;
-        str_size++;
+int main() {
+    int n, numdeg;
+    std::cin >> n >> numdeg;
+    int d = 1;
+    int n_tmp = n;
+    while ((n_tmp /= numdeg) != 0)
+        d *= numdeg;
+    while (d != 0) {
+        if ((n / d) < 10) {
+            std::cout << (n / d);
+        }
+        else {
+            std::cout << char(((n / d) % 10) + 65);
+        }
+        n %= d;
+        d /= numdeg;
     }
-    int i = str_size - 1;
-    while (i >= 0)
-    {
-        std::cout << result[i];
-        i--;
-    }
+    std::cout << std::endl;
     return 0;
 }
