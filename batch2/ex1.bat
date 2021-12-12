@@ -1,7 +1,12 @@
-@ECHO OFF 
-SETLOCAL ENABLEDELAYEDEXPANSION
-type NUL > file_2.txt
+@echo off
 
-for /f "usebackq tokens=1,2 delims= " %%a in ("file_1.txt") do (
-	echo %%b %%a >> file_2.txt
+if not exist %1 ( 
+    echo No file like this
+    exit /b 1 
 )
+
+for /F "usebackq eol=# tokens=1,2" %%i in (%1) do (
+     echo %%j %%i>>%2
+)
+
+exit /b 0
