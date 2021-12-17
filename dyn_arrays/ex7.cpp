@@ -23,4 +23,5 @@ int main() {
         std::cout << arr[i] << " ";
     }
     delete[] arr;
+    return 0;
 }
