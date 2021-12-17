@@ -15,4 +15,5 @@ int main() {
     int X;
     std::cin >> X;
     std::cout << mysqrt(X);
+    return 0;
 }
