@@ -4,10 +4,8 @@ bool F(double x, double y) {
 }
 int main()
 {
-    for (int y = 20; y >= 0; y--)
-    {
-        for (int x = 0; x < 41; x++)
-        {
+    for (int y = 20; y >= 0; y--){
+        for (int x = 0; x < 41; x++){
             if (F(-1.5 + 3. / 40. * (double)x, -1.5 + 3. / 20. * (double)y))
                 std::cout << "*";
             else
