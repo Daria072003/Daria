@@ -15,4 +15,5 @@ int main() {
 	}
 	std::cout << sum << std::endl;
 	delete[] m;
+	return 0;
 }
