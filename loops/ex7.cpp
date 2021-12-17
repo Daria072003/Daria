@@ -13,4 +13,5 @@ int main() {
         }
     }
     std::cout << (flag / (double)n) << std::endl;
+    return 0;
 }
