@@ -10,4 +10,5 @@ int main() {
 		n *= x;
 	}
 	std::cout << sum << "  " << 1 / (1 - x);
+	return 0;
 }
