@@ -16,4 +16,5 @@ int main() {
     if (N % 2 != 0) {
         std::cout << A[N / 2] + 1;
     }
+    return 0;
 }
