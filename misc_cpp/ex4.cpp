@@ -2,9 +2,9 @@
 #include<iostream>
 int main() {
 	setlocale(LC_ALL, "russian");
-	float x, eps;
+	double x, eps;
 	std::cin >> x >> eps;
-	float sum = 0, n = 1;
+	double sum = 0, n = 1;
 	while (abs(n) >= eps){
 		sum += n;
 		n *= x;
