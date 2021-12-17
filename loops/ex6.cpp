@@ -18,4 +18,5 @@ int main() {
         ++k;
     }
     std::cout << k << " " << max;
+    return 0;
 }
