@@ -14,4 +14,5 @@ int main() {
 	else {
 		std::cout << "out";
 	}
+	return 0;
 }
