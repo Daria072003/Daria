@@ -73,4 +73,5 @@ int main() {
         }
     }
     F(N);
+    return 0;
 }
