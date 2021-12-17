@@ -1,19 +1,19 @@
-#include<cmath>
 #include<iostream>
-int main() {
-	setlocale(LC_ALL, "russian");
-	const double height = 21., width = 41.;
-	for (double y = -1.5; y <= 1.5; y += 3. / height) {
-		for (double x = -1.5; x <= 1.5; x += 3. / width) {
-			double f = pow(x * x + y * y - 1, 3) - x * x * y * y * y;
-			if (f <= 0) {
-				std::cout << "*";
-			}
-			else {
-				std::cout << ".";
-			}
-		}
-		std::cout << std::endl;
-	}
-	return 0;
+bool F(double x, double y) {
+    return ((x * x + y * y - 1) * (x * x + y * y - 1) * (x * x + y * y - 1) - x * x * y * y * y <= 0);
+}
+int main()
+{
+    for (int y = 20; y >= 0; y--)
+    {
+        for (int x = 0; x < 41; x++)
+        {
+            if (F(-1.5 + 3. / 40. * (double)x, -1.5 + 3. / 20. * (double)y))
+                std::cout << "*";
+            else
+                std::cout << ".";
+        }
+        std::cout << std::endl;
+    }
+    return 0;
 }
