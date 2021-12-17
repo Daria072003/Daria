@@ -16,4 +16,5 @@ int main() {
         }
     }
     std::cout << A[ind] << " " << A[ind + 1];
+    return 0;
 }
