@@ -17,4 +17,5 @@ int main() {
             std::cout << i;
         }
     }
+    return 0;
 }
