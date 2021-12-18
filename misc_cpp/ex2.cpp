@@ -1,12 +1,21 @@
 #include <iostream>
 #include <cmath>
+
 int main() {
 	setlocale(LC_ALL, "russian");
 	double a, b, c;
 	std::cout << "Input a,b,c\n";
 	std::cin >> a >> b >> c;
 	if (a == 0) {
-		std::cout << "Уравнение имеет 1 корень:" << -c / b;
+		if (b == 0 && c == 0) {
+			std::cout << "Уравнение имеет бесконечное число решений";
+		}
+		else if (b == 0) {
+			std::cout << "Уравнение не имеет решений";
+		}
+		else {
+			std::cout << "Уравнение имеет 1 корень:" << -c / b;
+		}
 	}
 	else {
 		double d = b * b - 4 * a * c;
