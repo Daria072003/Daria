@@ -13,6 +13,7 @@ void shiftArray(int* A, int n, int k) {
     for (int i = 0; i < n; ++i) {
         A[i] = B[i];
     }
+    delete[] B;
 }
 
 int main() {
