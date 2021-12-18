@@ -1,9 +1,9 @@
 #include <iostream>
-int F(int R) {
+int F(unsigned long int R) {
     int counter = -1;
     for (int x = 0; x <= R; ++x) {
-        for (int y = 0; y <= R; ++y){
-            if ((x * x + y * y) <= R*R) {
+        for (int y = 0; y <= R; ++y) {
+            if ((x * x + y * y) <= R * R) {
                 ++counter;
             }
         }
