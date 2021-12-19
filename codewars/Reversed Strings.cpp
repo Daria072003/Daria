@@ -1,16 +1,12 @@
-#include<iostream>
-
 #include <string>
-using namespace std;
+using namespace std ; 
 
-string reverseString(string ss)
-{
-
-    string k = "";
-    for (int i = ss.length() - 1; i >= 0; i--)
-    {
-        k = k + ss[i];
-    }
-
-    return k;
+string reverseString (string str ){
+  char curr;
+  for(int i = 0; i < str.length()/2; ++i){
+    curr = str[i];
+    str[i]=str[str.length() - i - 1];
+    str[str.length()- i - 1] = curr;
+  }
+  return str;
 }
