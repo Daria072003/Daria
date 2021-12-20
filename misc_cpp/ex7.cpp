@@ -1,8 +1,8 @@
 #include <iostream>
-int F(unsigned long int R) {
-    int counter = -1;
-    for (int x = 0; x <= R; ++x) {
-        for (int y = 0; y <= R; ++y) {
+long long int F(long long int R) {
+    long long int counter = -1;
+    for (long long int x = 0; x <= R; ++x) {
+        for (long long int y = 0; y <= R; ++y) {
             if ((x * x + y * y) <= R * R) {
                 ++counter;
             }
