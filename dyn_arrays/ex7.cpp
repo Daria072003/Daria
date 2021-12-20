@@ -2,6 +2,7 @@
 
 void shiftArray(int* A, int n, int k) {
     int* B = new int[n];
+    k %= n;
     for (int i = 0; i < n; ++i) {
         if (i < k) {
             B[n - k + i] = A[i];
